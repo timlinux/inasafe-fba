@@ -15,7 +15,13 @@ This phase will do:
 - configuration for local docker-compose override
 - fetch test resources
 
-Every command will assume you are running it from this directory.
+Every command will assume you are running it from this directory (docker-osm/indonesia-buildings). 
+We also assume that you have docker installed on your system. 
+Make sure you have the brew coreutils package installed on your system:
+
+```bash
+brew install coreutils
+```
 
 First execute testing preparation scripts 
 
@@ -39,6 +45,13 @@ Use `.env` file to override environment variables that are going to be used in d
 
 Important keys like `PGRST_SERVER_PROXY_URI` and `PBF_URL` have comments on it to explain what it do.
 
+Typically you will want to replace fbf.test with your host's ip address (don't use localhost which will not 
+resolve inside of your docker containers). For example in VIM you might replace all references like this:
+
+```
+:%s/fbf.test/192.168.1.41/g
+```
+  
 ### Spin up the services
 
 Simply execute:
