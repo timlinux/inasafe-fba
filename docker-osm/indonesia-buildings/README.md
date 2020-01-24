@@ -73,4 +73,7 @@ The stack by default will expose postgres database in port 35432 in your local m
 You can check the database using psql or db admin tools.
 It will also expose postgrest and swagger-ui by default in port 3000 and 3080 respectively of your local machine.
 So you can check it from the browser to see if the API is available.
-The default address to check would be on the http://localhost:3000 and http://localhost:3080.
+The default address to check would be on the (json api) http://localhost:3000 and (swagger API browser) http://localhost:3080. For the latter if you see an error message on page load, just enter in the swagger Explore' window the URL you specified for your host e.g. http://192.168.1.41:3000
+
+
+
